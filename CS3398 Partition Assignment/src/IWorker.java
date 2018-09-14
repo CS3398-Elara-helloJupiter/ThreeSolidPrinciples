@@ -1,27 +1,74 @@
 package threesolid;
-// the interface can be entended to make take away tasks from the workers
 
-public interface IWorker extends IFeedable, IWorkable {
+/**
+ *Provides functions to objects derived from BaseWorker class
+ *@author Louis Scinta
+ *@since 09.14.18
+ */
+public interface IWorker extends IEat, ISick, IReboot
+{
+  /**
+   *Make a worker object work.
+   *All worker objects inherit <code>work</code> method 
+   *while having ability to use but not alter <code>eat</code>, <code>sick</code>, or <code>reboot</code> methods if needed.
+   */
+  public void work()
+  {
+    System.out.format("I called the work() method. \n"); 
+  }
 }
-interface IFeedable {
-    public void eat();
-        // nom nom nom
-}
-interface IWorkable {
-    public void work();
-        // work work work
+/**
+ *Extended by IWorker interface
+ *@author Louis Scinta
+ *@since 09.14.18
+ */
+interface IEat
+{
+  /**
+   *Makes worker eat
+   */
+  public void eat()
+  {
+    System.out.format("I called the eat() method. \n");
+  }
 }
 
-//This Interface file is an example of the ISP principle
+/**
+ *Extended by IWorker interface
+ *@author Louis Scinta
+ *@since 09.14.18
+ */
+interface ISick
+{
+  /**
+   *Provides worker objects ability to report sickness
+   */
+  public void sick()
+  {
+    System.out.format("I called the sick() method. \n");
+  }
+}
+/**
+ *Extended by <code>IWorker</code> interface
+ *@author Louis Scinta
+ *@since 09.14.18
+ */
+interface IReboot
+{
+  /**
+   *reboots non-human objects
+   */
+  public void reboot ()
+  {
+    System.out.format("I called the reboot () method. \n");
+  }
+}
 
-//Modified by: Louis Scinta 09/06/18
-//Action Taken: Segregated IWorker interface into two separate interfaces 
-//Reason: ISP states interfaces owned by clients
-//and clients shouldn't encounter methods they don't use.
-//In this case IWorker contained an eat() method which the Robot class
-//and potentially future non-human classes would not need. Thus, the Robot class inherited methods from IWorker it did not need
-//which violated the ISP. 
-//Additionally, this also satisfies SRP in that any class which
-//might request changes to the eat() method wouldn't interfere with classes which don't use that method.
-//Lastly, it satisfies OCP in that the methods contained in these interfaces are extendable to classes, but their implementation is not modifiable.
-//That is, every class which adopts this interface must agree to a uniform declaration of methods while still being able to implement them in ways specific to that class.
+/*
+ *work() method moved to parent interface to ensure all BaseWorker child objects inherited minimum ability to work.
+ *eat(), sick(), and reboot() methods segragated to satisfy ISP.
+ *Non-human BaseWorker objects will likely have no need for eat or sick,
+ *while human BaseWorker objects will not need reboot method.
+ *Deleted workable and feedable to satisfy client specifications for Assignment 5.
+ *Inserted Javadoc comments to enhance readability and allow for future API development
+ */             
