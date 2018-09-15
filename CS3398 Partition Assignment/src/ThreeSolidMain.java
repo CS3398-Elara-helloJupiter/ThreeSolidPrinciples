@@ -15,44 +15,41 @@ import java.io.*;
 // The interface-segregation principle (ISP) is not relevant for the main file at this time as it is not depending upon any
 // of the methods specified by the interface file IWorker.java. 
 
-
-
 public class ThreeSolidMain
-{   
-	
+{
    //Declaring objecs for each class
-   public static Robot R2D2 = new Robot();
-   public static TempWorker coffeeFetcher = new TempWorker();
-   public static Worker janeDoe = new Worker();
-   public static SuperWorker danTheMan = new SuperWorker();
-   public static Manager tsManager = new Manager();
-
+   public Robot R2D2 = new Robot();
+   public TempWorker coffeeFetcher = new TempWorker();
+   public Worker janeDoe = new Worker();
+   public SuperWorker danTheMan = new SuperWorker();
+   public Manager tsManager = new Manager();
+   
    // The entry main() method
    public static void main(String[] args) 
    {
-	  //Running through the methods of each class
-	  R2D2.work();
-	  R2D2.reboot();
-	  
-	  janeDoe.work();
-	  janeDoe.eat();
-	  janeDoe.sick();
-	  
-	  coffeeFetcher.work();
-	  coffeeFetcher.eat();
-	  coffeeFetcher.sick();
-	  
-	  danTheMan.work();
-	  danTheMan.eat();
-	  danTheMan.sick();
-	  
-	  tsManager.schedulework();
-	  tsManager.defineproduct();
-
       try 
       {
-         System.out.format("Starting ... \n");               
+         System.out.format("Starting ... \n");         
+    	 //Running through the methods of each class
+    	 R2D2.work();
+    	 R2D2.reboot();
+
+    	 janeDoe.work();
+    	 janeDoe.eat();
+    	 janeDoe.sick();
+    	  
+    	 coffeeFetcher.work();
+    	 coffeeFetcher.eat();
+    	 coffeeFetcher.sick();
+    	  
+    	 danTheMan.work();
+    	 danTheMan.eat();
+    	 danTheMan.sick();
+    	 
+    	 tsManager.schedulework();
+    	 tsManager.defineproduct();
       } 
+      
       catch (Exception main_except)
       {
          main_except.printStackTrace();
