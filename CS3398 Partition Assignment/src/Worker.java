@@ -2,7 +2,7 @@ package threesolid;
 
 
 public class Worker extends BaseWorker implements IEat, ISick {
-	@Override
+
 	public void work() {
 		//.... working
 	}
