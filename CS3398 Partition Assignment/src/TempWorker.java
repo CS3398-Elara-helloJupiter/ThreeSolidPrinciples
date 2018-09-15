@@ -12,3 +12,4 @@ public class TempWorker extends BaseWorker implements IEat, ISick {
 	public void sick() {
 		//.... I'm sick
 	}
+}
