@@ -17,9 +17,14 @@ package threesolid;
 //which will allow us to make the class independent from the interface 
 //and will only use it when needed.
 
-public abstract class Robot implements IWorkable{
+public class Robot extends BaseWorker implements IReboot{
 	 public void work() {
-		 //working.... beep boop
+		 System.out.format("Robot working..\n");
+	 }
+	 public void reboot() {
+		 //rebooting !
+		 System.out.format("Rebooting robot. beep..boop\n");
+		 
 	 }
 
 }

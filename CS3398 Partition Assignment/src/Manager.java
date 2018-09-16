@@ -5,12 +5,12 @@ package threesolid;
 // the tasks will be applied accordying to the worker type
 
 public class Manager {
-	IWorker worker;
+	BaseWorker worker;
 
 	public void Manager() {
 
 	}
-	public void setWorker(IWorker w) {
+	public void setWorker(BaseWorker w) {
 		worker=w;
 	}
 

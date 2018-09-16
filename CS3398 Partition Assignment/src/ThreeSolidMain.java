@@ -15,21 +15,48 @@ import java.io.*;
 // The interface-segregation principle (ISP) is not relevant for the main file at this time as it is not depending upon any
 // of the methods specified by the interface file IWorker.java. 
 
-
-
 public class ThreeSolidMain
-{   
-
-   public static Manager tsManager = new Manager();
-
+{
+   //Declaring objecs for each class
+	
+	 
+   public static Robot R2D2 = new Robot();
+   public static BaseWorker basicBob = new BaseWorker();
+   public static TempWorker coffeeFetcher = new TempWorker();
+   public static Worker janeDoe = new Worker();
+   public static SuperWorker danTheMan = new SuperWorker();
+   public static ProjectManager devManager = new ProjectManager();
+   public static ProductManager salesManager = new ProductManager();
+   
    // The entry main() method
    public static void main(String[] args) 
    {
- 
       try 
       {
-         System.out.format("Starting ... \n");               
+         System.out.format("Starting ... \n");         
+    	 //Running through the methods of each class
+    	 R2D2.work();
+    	 R2D2.reboot();
+    	 
+    	 basicBob.work();
+
+    	 janeDoe.work();
+    	 janeDoe.eat();
+    	 janeDoe.sick();
+    	  
+    	 coffeeFetcher.work();
+    	 coffeeFetcher.eat();
+    	 coffeeFetcher.sick();
+    	  
+    	 danTheMan.work();
+    	 danTheMan.eat();
+    	 danTheMan.sick();
+    	 
+    	 devManager.scheduleworker();
+    	 
+    	 salesManager.defineproduct();
       } 
+      
       catch (Exception main_except)
       {
          main_except.printStackTrace();

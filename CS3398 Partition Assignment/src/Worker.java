@@ -1,24 +1,17 @@
 package threesolid;
 
 
-public class Worker implements IWorker{
-		public void work() {
-			// ....working
-		}
+public class Worker extends BaseWorker implements IEat, ISick {
 
-		public void eat() {
-			//.... eating in launch break
-		}
-	}
-	
-class SuperWorker implements IWorker{
 	public void work() {
-		//.... working much more
+		System.out.format("worker is working\n");
 	}
-
 	public void eat() {
-		//.... eating in launch break
+		System.out.format("worker is eating\n");
+	}
+	public void sick() {
+		//.... I'm sick
+		System.out.format("worker is sick\n");
 	}
 }
-
-
+	
