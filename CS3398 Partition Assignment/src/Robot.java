@@ -19,10 +19,11 @@ package threesolid;
 
 public abstract class Robot extends BaseWorker implements IReboot{
 	 public void work() {
-		 //working.... beep boop
+		 System.out.format("Robot working..");
 	 }
 	 public void reboot() {
 		 //rebooting !
+		 System.out.format("Rebooting robot. beep..boop");
 		 
 	 }
 

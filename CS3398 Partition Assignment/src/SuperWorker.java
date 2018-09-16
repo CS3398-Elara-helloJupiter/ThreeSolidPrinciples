@@ -4,12 +4,12 @@ package threesolid;
 public class SuperWorker extends BaseWorker implements IEat, ISick {
 	@Override
 	public void work() {
-		//.... working
+		System.out.format("Super Worker is working");
 	}
 	public void eat() {
-		//.... eating in launch break
+		System.out.format("Super worker is eating");
 	}
 	public void sick() {
-		//.... I'm sick
+		System.out.format("Super worker is sick");
 	}
 }

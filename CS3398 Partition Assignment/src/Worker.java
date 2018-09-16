@@ -4,13 +4,14 @@ package threesolid;
 public class Worker extends BaseWorker implements IEat, ISick {
 
 	public void work() {
-		//.... working
+		System.out.format("worker is working");
 	}
 	public void eat() {
-		//.... eating in launch break
+		System.out.format("worker is eating");
 	}
 	public void sick() {
 		//.... I'm sick
+		System.out.format("worker is sick");
 	}
 }
 	
