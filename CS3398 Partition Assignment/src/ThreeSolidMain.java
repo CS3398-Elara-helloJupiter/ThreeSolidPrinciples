@@ -52,7 +52,7 @@ public class ThreeSolidMain
     	 danTheMan.eat();
     	 danTheMan.sick();
     	 
-    	 devManager.schedulework();
+    	 devManager.scheduleworker();
     	 
     	 salesManager.defineproduct();
       } 
