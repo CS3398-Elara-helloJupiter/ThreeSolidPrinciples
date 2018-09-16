@@ -18,11 +18,15 @@ import java.io.*;
 public class ThreeSolidMain
 {
    //Declaring objecs for each class
+	
+	 
    public Robot R2D2 = new Robot();
+   public BaseWorker basicBob = new BaseWorker();
    public TempWorker coffeeFetcher = new TempWorker();
    public Worker janeDoe = new Worker();
    public SuperWorker danTheMan = new SuperWorker();
-   public Manager tsManager = new Manager();
+   public projectManager devManager = new ProjectManager();
+   public productManager salesManager = new ProductManager();
    
    // The entry main() method
    public static void main(String[] args) 
@@ -33,6 +37,8 @@ public class ThreeSolidMain
     	 //Running through the methods of each class
     	 R2D2.work();
     	 R2D2.reboot();
+    	 
+    	 basicBob.work();
 
     	 janeDoe.work();
     	 janeDoe.eat();
@@ -46,8 +52,9 @@ public class ThreeSolidMain
     	 danTheMan.eat();
     	 danTheMan.sick();
     	 
-    	 tsManager.schedulework();
-    	 tsManager.defineproduct();
+    	 projectManager.schedulework();
+    	 
+    	 salesManager.defineproduct();
       } 
       
       catch (Exception main_except)
