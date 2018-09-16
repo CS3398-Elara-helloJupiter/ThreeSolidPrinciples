@@ -20,13 +20,13 @@ public class ThreeSolidMain
    //Declaring objecs for each class
 	
 	 
-   public Robot R2D2 = new Robot();
-   public BaseWorker basicBob = new BaseWorker();
-   public TempWorker coffeeFetcher = new TempWorker();
-   public Worker janeDoe = new Worker();
-   public SuperWorker danTheMan = new SuperWorker();
-   public projectManager devManager = new ProjectManager();
-   public productManager salesManager = new ProductManager();
+   public static Robot R2D2 = new Robot();
+   public static BaseWorker basicBob = new BaseWorker();
+   public static TempWorker coffeeFetcher = new TempWorker();
+   public static Worker janeDoe = new Worker();
+   public static SuperWorker danTheMan = new SuperWorker();
+   public static ProjectManager devManager = new ProjectManager();
+   public static ProductManager salesManager = new ProductManager();
    
    // The entry main() method
    public static void main(String[] args) 
@@ -52,7 +52,7 @@ public class ThreeSolidMain
     	 danTheMan.eat();
     	 danTheMan.sick();
     	 
-    	 projectManager.schedulework();
+    	 devManager.schedulework();
     	 
     	 salesManager.defineproduct();
       } 
