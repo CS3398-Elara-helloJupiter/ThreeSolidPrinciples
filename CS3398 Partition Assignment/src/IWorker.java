@@ -1,6 +1,7 @@
 package threesolid;
 // the interface can be entended to make take away tasks from the workers
 
+
 public interface IWorker extends IFeedable, IWorkable {
 }
 interface IFeedable {
