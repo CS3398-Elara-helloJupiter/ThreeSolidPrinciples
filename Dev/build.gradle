@@ -103,9 +103,9 @@ dependencies {
     )
 }
 // end::dependencies[]
-test {
-    useJUnitPlatform()
-}
+//test {
+//    useJUnitPlatform()
+//}
 
 // tag::wrapper[]
 task wrapper(type: Wrapper) {
