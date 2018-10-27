@@ -11,5 +11,5 @@ interface IEat extends IWorker
   /**
    *Makes worker eat
    */
-  public void eat();
+  public String eat();
 }

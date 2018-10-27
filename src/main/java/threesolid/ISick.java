@@ -11,5 +11,5 @@ interface ISick extends IWorker
   /**
    *Provides worker objects ability to report sickness
    */
-  public void sick();
+  public int sick();
 }
