@@ -7,8 +7,10 @@ public class Worker extends BaseWorker implements IEat, ISick {
 		//System.out.format("worker is working\n");
 		return "I'm working already!";
 	}
-	public void eat() {
+	public String eat() {
 		System.out.format("worker is eating\n");
+		
+		return "worker is eating";
 	}
 	public void sick() {
 		//.... I'm sick

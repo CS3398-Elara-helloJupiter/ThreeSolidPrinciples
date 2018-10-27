@@ -12,4 +12,22 @@ public class TestWorker {
  {
    assertEquals(w.work(),"I'm working already!", "Mismatch between test text and method text" );
  }
+ 
+  @Test
+ @DisplayName("Eat Method Test")
+ public void newtestMGWorkerPass()
+ {
+	
+   assertEquals(w.eat(), "worker is eating","Mismatch between test text and method text");
+ }
+ 
+   @Test
+ @DisplayName("Eat Method fail Test")
+ public void newtestMGWorkerFail()
+ {
+	
+   assertNotEquals(w.eat(), "worker is eating","Mismatch between test text and method text");
+ }
+ 
+ 
 }

@@ -7,9 +7,11 @@ public class TempWorker extends BaseWorker implements IEat, ISick {
 		//System.out.format("Temporary worker working\n");
 		return "I'm working already!";
 	}
-	public void eat() {
+	public String eat() {
 		//.... eating in launch break
 		System.out.format("Temporary worker eating\n");
+
+		return "Temporary worker eating";
 	}
 	public void sick() {
 		//.... I'm sick
